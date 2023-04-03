@@ -1,0 +1,27 @@
+[
+    {
+        "id":"1",
+        "isCompleted":false,
+        "description":"Pasear al perro"
+    },
+    {
+        "id":"2",
+        "isCompleted":true,
+        "description":"TAREA COMPLETADA"
+    },  
+    {
+        "id":"3",
+        "isCompleted":false,
+        "description":"Visitar a mis abuelos"
+    },
+    {
+        "id":"4",
+        "isCompleted":false,
+        "description":"Estudiar programación"
+    },
+    {
+        "id":"5",
+        "isCompleted":true,
+        "description":"TAREA REALIZADA"
+    }  
+]

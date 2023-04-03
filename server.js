@@ -2,30 +2,17 @@ const express = require('express');
 
 const app = express();
 
-const TASKLIST = [
-    {
-        "id":"1",
-        "isCompleted":false,
-        "description":"Walk the dog",
-    },
-    {
-        "id":"2",
-        "isCompleted":false,
-        "description":"Visit my grandparents",
-    },
-    {
-        "id":"3",
-        "isCompleted":false,
-        "description":"listen to music",
-    } 
-]
+const mostrarTareasRouter = require('./list-view-router.js');
+const editarTareasRouter = require("./list-edit-router");
 
-app.use(express.json())
+app.use(express.json());
+app.use('/mostrar-tareas', mostrarTareasRouter);
+app.use('/editar-lista-tareas', editarTareasRouter);
 
 app.get('/', (req, res)=> {
-    res.json(TASKLIST);
+    res.send('Servidor con Express');
 });
 
 app.listen(8080, () => {
-    console.log('servidor corriendo');
+    console.log('servidor corriendo en puerto 8080');
 });
